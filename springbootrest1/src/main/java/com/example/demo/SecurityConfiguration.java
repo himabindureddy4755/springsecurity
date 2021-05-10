@@ -34,7 +34,7 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
 		http.authorizeRequests()
 		.antMatchers("/admin")//match for all the paths
 		.hasRole("ADMIN")
-		.antMatchers("/user").hasAnyRole("User","ADMIN")
+		.antMatchers("/user").hasRole("User")
 		
 		.antMatchers("/").permitAll()
 		
